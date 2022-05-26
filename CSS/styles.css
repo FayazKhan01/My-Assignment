@@ -9,6 +9,7 @@ div.container{
     /* flex-wrap: wrap; */
     
 }
+
 div.box2-image h1{
     position: absolute;
     margin-top: 440px ;
@@ -16,9 +17,33 @@ div.box2-image h1{
     color: whitesmoke;
     font-size: 30px;
     margin-left: 160px;
+}
 
+div.box2-image .f1{
+    z-index: 3;
+    position: absolute;
+    margin-left: 170px;
+    margin-top: 485px;
+    color:whitesmoke;
 
 }
+
+div.box2-image .f2{
+    z-index: 3;
+    position: absolute;
+    margin-left: 210px;
+    margin-top: 485px;
+    color: whitesmoke;
+}
+
+div.box2-image .f3{
+    z-index: 3;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 485px;
+    color: whitesmoke;
+}
+
 div.box2-image {
     background-color: rgb(255, 255, 255);
     position: absolute;
