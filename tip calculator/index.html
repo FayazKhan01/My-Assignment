@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <style>
+        body {
+            background-color: chocolate;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .calculator {
+            /* display: flex; */
+            /* justify-content: center; */
+            
+            background-color: brown;
+            margin: 20px;
+            padding: 80px 20px;
+            border-radius: 20px;
+            font-size: 20px;
+            /* position: relative; */
+            text-align: center;
+
+        }
+
+        .btn {
+            font-size: 20px;
+            padding: 10px;
+            background-color: coral;
+            margin-left: 140px; 
+
+        }
+
+        input {
+            background-color: darkred;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator" id="container">
+        <label for="bill">Bill Amount : </label>
+        <input type="text" id="billAmount"><br><br>
+
+        <label for="bill">Percentage Tip : </label>
+        <input type="text" id="percentage"><br><br>
+
+        <label for="bill">Tip : </label>
+        <input type="text" id="tip" disabled><br><br>
+
+        <label for="bill">Total Amount : </label>
+        <input type="text" id="total" disabled><br><br>
+
+        <button class="btn" id="btn" onclick="tipCalculator()">Calculate</button>
+
+    </div>
+    <script src="./tipC.js"></script>
+</body>
+
+</html>

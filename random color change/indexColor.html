@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color</title>
+    <style>
+        #bgcolor {
+            /* align-items: center; */
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+
+        #clock {
+            border: 5px solid darkred ;
+            transition: all 0.5s ease-in-out;
+
+            /* align-items: center; */
+            padding: 10px;
+            /* display: flex;
+            justify-content: center;
+
+            align-items: center; */
+            text-align: center;
+            width: 60%;
+            margin: auto;
+            /* vertical-align: auto; */
+        }
+        #show{
+            font-family:monospace;
+            font-weight: bold;
+            color: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="clock"> <b>Backgorund Color</b>
+        <h1>
+            <button id="bgcolor" onclick="randomColor()">Click Me</button>
+            <h2 id="show">color</h2>
+        </h1>
+        <script src="randomColorChange.js"></script>
+    </div>
+</body>
+
+</html>

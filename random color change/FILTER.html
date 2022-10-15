@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Form</title>
+    <style>
+        h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 40%;
+            border: 1px solid yellow;
+            margin: auto;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+ <h2 id="time" onload="printTime()">Filter </h2>
+
+ <input type="text" id="input" onchange="changeToUpperCase()" >
+ <!-- <button for = "ch" >Chage Value</button> -->
+    <p id="khan">j</p>
+
+    <script>
+        // const numbers = [1,2, -3 , 5 ,-5];
+        // var finalResult = numbers.filter(function(v){
+        // return v >= 0 ;
+        // }); 
+        // console.log(finalResult);
+
+        const numbers = [1, 2, 3 ,-3, 5, -5];
+        var finalResult = numbers.filter(v => v >= 0);
+        console.log(finalResult);
+        let a = numbers.map( value =>  10 * value ).reduce(function(g , b){
+            return g + b ;
+        });
+        console.log(a);
+        document.write(a);
+
+        function printTime() {
+            var d = new Date();
+            var hours = d.getHours();
+            var min = d.getMinutes();
+            var sec = d.getSeconds();
+            var ss = "AM";
+            if (hours == 0){
+                hours = 12 ; 
+            }
+            if (hours > 12){
+                hours = hours - 12 ;
+                ss = "PM";
+            }
+            
+            var secs = sec < 10 ? "0"+ sec : sec ;
+            var mins = min < 10 ? "0" + min : min ;
+            var hour = hours < 10 ? "0" + hours : hours ;
+
+            var times = `${hour} : ${mins} : ${secs} : ${ss}`  ;
+            document.getElementById("time").innerText = times;
+
+            setInterval (()=>  printTime(),1000); 
+
+        }
+        printTime();
+
+        function changeToUpperCase() {
+            var x = document.getElementById("input").value.toUpperCase();
+            // let a = x.toUpperCase();
+            console.log(x);
+            document.getElementById("khan").innerText = x ;   
+                  
+        }
+        changeToUpperCase();
+
+    </script>
+</body>
+
+</html>
