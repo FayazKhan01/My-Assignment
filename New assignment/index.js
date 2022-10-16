@@ -2,13 +2,17 @@
 // PersonAccount Details
 
 class PersonAccount {
-    constructor(firstName, lastName, incomes, expenses, properties) {
+    constructor(firstName, lastName, incomes, expenses, other ) {
         this.firstName = firstName
         this.lastName = lastName
         this.incomes = incomes
         this.expenses = expenses
-        this.properties = properties
+        this.other = other
     };
+    fullName(){
+        let fullnName = this.firstName + " " + this.lastName ;
+        console.log(fullnName);
+    }
     totalIncome() {
         let total = 0;
         this.incomes.forEach(income => {
@@ -27,21 +31,23 @@ class PersonAccount {
     }
     addIncome(amount) {
         this.incomes.push(amount);
-        console.log(this.incomes);
+        console.log("Total incomes stream "+" : "+ "Salary: "+this.incomes[0] +" , "+ "Bonus: "+this.incomes[1]+ " , "+"Properties: "+this.incomes[2]+ " , "+"Bonds: "+this.incomes[3] );
     }
     addExpense(amount) {
         this.expenses.push(amount);
-        console.log(this.expenses);
+        console.log("Total expenses "+ " : "+"Pocket Money : "+this.expenses[0] +" , "+"Eloads : "+this.expenses[1] +" , "+"Tours : "+this.expenses[2] +" , "+"Outings : "+this.expenses[3] );
     }
     accountBalance() {
         let accountBalance = this.totalIncome() - this.totalExpense();
         console.log("Total Account Balance = " + accountBalance);
     }
 }
-const account = new PersonAccount("Fayaz", "Khan", [40000, 25000, 50000, 60000], [10000, 2400, 36844, 25900], [12000, 1400, 55844, 55987]);
-// console.log(account.incomes);
-document.write(account.incomes);
+const account = new PersonAccount("Fayaz", "Khan", [60000, 25000, 50000, 30000], [20000, 4400, 36800, 25900], [12000, 1400, 55844, 55987]);
 
+document.write("Total incomes stream "+" : "+ "Salary: "+account.incomes[0] +" , "+ "Bonus: "+account.incomes[1]+ " , "+"Properties: "+account.incomes[2]+ " , "+"Bonds: "+account.incomes[3] +"<br>");
+document.write("Total expenses "+ " : "+"Pocket Money : "+account.expenses[0] +" , "+"Eloads : "+account.expenses[1] +" , "+"Tours : "+account.expenses[2] +" , "+"Outings : "+account.expenses[3] );
+    
+account.fullName();
 account.totalIncome();
 account.totalExpense();
 account.addIncome(12000);
